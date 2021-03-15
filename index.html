@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="icofont.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Gradients | Beautiful Coloured Gradients for UI Design</title>
+</head>
+<body>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="icon-files-empty" viewBox="0 0 32 32">
+        <path d="M28.681 11.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-11.5c-1.379 0-2.5 1.122-2.5 2.5v23c0 1.378 1.121 2.5 2.5 2.5h19c1.378 0 2.5-1.122 2.5-2.5v-15.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 9.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268v0zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-19c-0.271 0-0.5-0.229-0.5-0.5v-23c0-0.271 0.229-0.5 0.5-0.5 0 0 11.499-0 11.5 0v7c0 0.552 0.448 1 1 1h7v15.5z"></path>
+        <path d="M18.841 1.319c-1.612-1.182-2.393-1.319-2.841-1.319h-11.5c-1.378 0-2.5 1.121-2.5 2.5v23c0 1.207 0.86 2.217 2 2.45v-25.45c0-0.271 0.229-0.5 0.5-0.5h15.215c-0.301-0.248-0.595-0.477-0.873-0.681z"></path>
+        </symbol>
+        <symbol id="icon-contrast" viewBox="0 0 32 32">
+        <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM4 16c0-6.627 5.373-12 12-12v24c-6.627 0-12-5.373-12-12z"></path>
+        </symbol>
+        <symbol id="icon-star-empty" viewBox="0 0 32 32">
+        <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+        </symbol>
+        <symbol id="icon-star-full" viewBox="0 0 32 32">
+        <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+        </symbol>
+        <symbol id="icon-heart" viewBox="0 0 32 32">
+        <path d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z"></path>
+        </symbol>
+        <symbol id="icon-plus" viewBox="0 0 32 32">
+        <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+        </symbol>
+        <symbol id="icon-minus" viewBox="0 0 32 32">
+        <path d="M0 13v6c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1h-30c-0.552 0-1 0.448-1 1z"></path>
+        </symbol>
+        <symbol id="icon-cross" viewBox="0 0 32 32">
+        <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+        </symbol>
+        <symbol id="icon-checkmark" viewBox="0 0 32 32">
+        <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+        </symbol>
+        <symbol id="icon-arrow-up2" viewBox="0 0 32 32">
+        <path d="M27.414 12.586l-10-10c-0.781-0.781-2.047-0.781-2.828 0l-10 10c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l6.586-6.586v19.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-19.172l6.586 6.586c0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828z"></path>
+        </symbol>
+        <symbol id="icon-arrow-right2" viewBox="0 0 32 32">
+        <path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+        </symbol>
+        <symbol id="icon-arrow-down2" viewBox="0 0 32 32">
+        <path d="M27.414 19.414l-10 10c-0.781 0.781-2.047 0.781-2.828 0l-10-10c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0l6.586 6.586v-19.172c0-1.105 0.895-2 2-2s2 0.895 2 2v19.172l6.586-6.586c0.39-0.39 0.902-0.586 1.414-0.586s1.024 0.195 1.414 0.586c0.781 0.781 0.781 2.047 0 2.828z"></path>
+        </symbol>
+        <symbol id="icon-arrow-left2" viewBox="0 0 32 32">
+        <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
+        </symbol>
+        </defs>
+        </svg>
+    <div class="container">
+        <div class="navigation" onclick="navigationToggle(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
+        <nav class="nav-container hide">
+                <a href="#" class="link">GitHub</a>
+                <ion-icon name="moon"></ion-icon>
+        </nav>
+        <div class="utilities">
+            <ion-icon name="bookmarks-outline"></ion-icon>
+            <!-- <ion-icon name="add-outline"></ion-icon>   -->
+        </div>
+        </menu>
+        <section class="main">
+            <h1 class="primary-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis at voluptate sequi odio sint porro minima aliquid, debitis, atque error eum sed ullam rem eaque, omnis magni delectus! Omnis, magni! </h1>
+        </section>
+        <div class="vis">
+            <input type="text" value="Hello World" id="myInput">
+            <button onclick="copyToClipboard()" id="inpbtn"></button>
+        </div>
+        <div class="add-gradient">
+            <ion-icon name="add-outline"></ion-icon>
+            <div class="add-gradient-form hide-tab">
+                <span class="title gname">Gradient Name</span>
+                <div class="fields gradient-name">
+                    <input type="text" name="gradient-name" id="g-name">
+                </div>
+                <div class="colors-input">
+                    <span class="title color1">Color 1</span>
+                    <div class="color color-1-inp">
+                        <input type="color" name="color-1" id="color-1" value="#ffffff">
+                    </div>
+                    <span class="title color2">Color 2</span>
+                    <div class="color color-2-inp">
+                        <input type="color" name="color-2" id="color-2" value="#ffffff">
+                    </div>
+                </div>
+                <div class="submit">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="bookmark-tab hide-tab">
+            <!-- <div class="bookmark-tab-card">
+                <div class="bookmark-tab-gradient">
+                    <span id="gradient--1"></span>
+                </div>
+                <div class="bookmark-tab-name">
+                    <div class="h4">Ibiza Sunset</div>
+                </div>
+                <div class="bookmark-tab-delete">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div> -->
+        </div>
+        <section class="card-container">
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-1"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline"  data-number="1"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="1"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-1-0" class="circle c" data-index="1-0"></span>
+                    <span id="circle-1-1" class="circle c" data-index="1-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-2"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline"  data-number="2"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="2"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Brady Fun</span>
+                <div class="circle-container">
+                        <span id="circle-2-0" class="circle c" data-index="2-0"></span>
+                        <span id="circle-2-1" class="circle c" data-index="2-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-3"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline"  data-number="3"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="3"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-3-0" class="circle c" data-index="3-0"></span>
+                    <span id="circle-3-1" class="circle c" data-index="3-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-4"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline"  data-number="4"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="4"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-4-0" class="circle c" data-index="4-0"></span>
+                    <span id="circle-4-1" class="circle c" data-index="4-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-5"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline"  data-number="5"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="5"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-5-0" class="circle c"data-index="5-0"></span>
+                    <span id="circle-5-1" class="circle c" data-index="5-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-6"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline"  data-number="6"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="6"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-6-0" class="circle c" data-index="6-0"></span>
+                    <span id="circle-6-1" class="circle c" data-index="6-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-7"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="7"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="7"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-7-0" class="circle c" data-index="7-0"></span>
+                    <span id="circle-7-1" class="circle c" data-index="7-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-8"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="8"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="8"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-8-0" class="circle c" data-index="8-0"></span>
+                    <span id="circle-8-1" class="circle c" data-index="8-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-9"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="9"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="9"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-9-0" class="circle c" data-index="9-0"></span>
+                    <span id="circle-9-1" class="circle c" data-index="9-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-10"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="10"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="10"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-10-0" class="circle c" data-index="10-0"></span>
+                    <span id="circle-10-1" class="circle c" data-index="10-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-11"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="11"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="11"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-11-0" class="circle c" data-index="11-0"></span>
+                    <span id="circle-11-1" class="circle c" data-index="11-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-12"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="12"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="12"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-12-0" class="circle c" data-index="12-0"></span>
+                    <span id="circle-12-1" class="circle c" data-index="12-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-13"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="13"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="13"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-13-0" class="circle c" data-index="13-0"></span>
+                    <span id="circle-13-1" class="circle c" data-index="13-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-14"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="14"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="14"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-14-0" class="circle c" data-index="14-0"></span>
+                    <span id="circle-14-1" class="circle c" data-index="14-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-15"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="15"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="15"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-15-0" class="circle c" data-index="15-0"></span>
+                    <span id="circle-15-1" class="circle c" data-index="15-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-16"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="16"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="16"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-16-0" class="circle c" data-index="16-0"></span>
+                    <span id="circle-16-1" class="circle c" data-index="16-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-17"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="17"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="17"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-17-0" class="circle c" data-index="17-0"></span>
+                    <span id="circle-17-1" class="circle c" data-index="17-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-18"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="18"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="18"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-18-0" class="circle c" data-index="18-0"></span>
+                    <span id="circle-18-1" class="circle c" data-index="18-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-19"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="19"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="19"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-19-0" class="circle c" data-index="19-0"></span>
+                    <span id="circle-19-1" class="circle c" data-index="19-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-20"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="20"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="20"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-20-0" class="circle c" data-index="20-0"></span>
+                    <span id="circle-20-1" class="circle c" data-index="20-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-21"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="21"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="21"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-21-0" class="circle c" data-index="21-0"></span>
+                    <span id="circle-21-1" class="circle c" data-index="21-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-22"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="22"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="22"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-22-0" class="circle c" data-index="22-0"></span>
+                    <span id="circle-22-1" class="circle c" data-index="22-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-23"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="23"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="23"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-23-0" class="circle c" data-index="23-0"></span>
+                    <span id="circle-23-1" class="circle c" data-index="23-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-24"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="24"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="24"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-24-0" class="circle c" data-index="24-0"></span>
+                    <span id="circle-24-1" class="circle c" data-index="24-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-25"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="25"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="25"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-25-0" class="circle c" data-index="25-0"></span>
+                    <span id="circle-25-1" class="circle c" data-index="25-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-26"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="26"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="26"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-26-0" class="circle c" data-index="26-0"></span>
+                    <span id="circle-26-1" class="circle c" data-index="26-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-27"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="27"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="27"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-27-0" class="circle c" data-index="27-0"></span>
+                    <span id="circle-27-1" class="circle c" data-index="27-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-28"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="28"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="28"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-28-0" class="circle c" data-index="28-0"></span>
+                    <span id="circle-28-1" class="circle c" data-index="28-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-29"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="29"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="29"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-29-0" class="circle c" data-index="29-0"></span>
+                    <span id="circle-29-1" class="circle c" data-index="29-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-30"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="30"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="30"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-30-0" class="circle c" data-index="30-0"></span>
+                    <span id="circle-30-1" class="circle c" data-index="30-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-31"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="31"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="31"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-31-0" class="circle c" data-index="31-0"></span>
+                    <span id="circle-31-1" class="circle c" data-index="31-1"></span>
+                </div>
+            </div>
+            <div class="card" onmouseover="gradient(this)" onmouseout="nogradient(this)">
+                <div class="gradient">
+                    <span id="gradient-32"></span>
+                </div>
+                <div class="icons">
+                    <div class="copy">
+                        <ion-icon name="copy-outline" data-number="32"></ion-icon>
+                        <div class="copied hide">
+                            <div class="copied-text">
+                                Copied CSS !
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookmark">
+                        <ion-icon name="bookmark-outline" data-pos="32"></ion-icon>
+                    </div>
+                </div>
+                <span class="name">Ibiza Sunset</span>
+                <div class="circle-container">
+                    <span id="circle-32-0" class="circle c" data-index="32-0"></span>
+                    <span id="circle-32-1" class="circle c" data-index="32-1"></span>
+                </div>
+            </div>
+   
+        </section>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
