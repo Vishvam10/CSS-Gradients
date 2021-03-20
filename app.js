@@ -8,7 +8,6 @@ function rgbToHex(r, g, b) {
     return "#"+ componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-
 // COPY CSS
 
 const copyIcon = document.querySelectorAll(".copy");
@@ -18,8 +17,6 @@ var utils = document.querySelector('.utilities');
 const nav = document.querySelector(".navigation");
 const navContainer = document.querySelector(".nav-container");
 var addGradient = document.querySelector('.add-gradient')
-var gradientForm = addGradient.childNodes[3];
-console.log(gradientForm);
 const darkSwitch = navContainer.childNodes[5];
 
 // var bookmarkTab = document.querySelector('.bookmark-tab')
@@ -140,72 +137,21 @@ nav.addEventListener("click", e => {
     navContainer.classList.toggle("hide")
 })
 
-// ADD GRADIENTS 
-
-function createGradientCard(gname, color1, color2, id) {
-    
-    const gradientCardMarkup = 
-    `
-        <div class="card">
-            <div class="gradient">
-                <span id="gradient-${id}"></span>
-            </div>
-            <div class="icons">
-                <ion-icon name="copy-outline"  data-number="${id}"></ion-icon>
-                <div class="bookmark">
-                    <ion-icon name="bookmark-outline" data-pos="${id}"></ion-icon>
-                </div>
-            </div>
-            <span class="name">${gname}</span>
-            <div class="circle-container">
-                <span id="circle-${id}-0" class="circle c"data-index="-${id}-0"></span>
-                <span id="circle-${id}-1" class="circle c" data-index="${id}-1"></span>
-            </div>
-        </div>
-    `    
-    cardContainer.insertAdjacentHTML('beforeend', gradientCardMarkup); 
-
-    const gr = document.getElementById(`gradient-${id}`);
-    gr.style.background = "linear-gradient(to right, " + color1 + ", " + color2 + ")";
-
-    const c1 = document.getElementById(`circle-${id}-0`);
-    const c2 = document.getElementById(`circle-${id}-1`);
-
-    c1.style.backgroundColor = `${color1}`;
-    c2.style.backgroundColor = `${color2}`;
-}
-
-addGradient.childNodes[1].addEventListener("click", e => {
-    gradientForm.classList.toggle("hide-tab")
-})
-
-const submitButton = document.querySelector('.submit');
-
-submitButton.childNodes[1].addEventListener("click", e => {
-
-    const gradientName = document.getElementById('g-name').value;
-    const color1 = document.getElementById('color-1').value;
-    const color2 = document.getElementById('color-2').value;
-    const id = cardContainer.childElementCount + 1;
-
-    createGradientCard(gradientName, color1, color2, id);
-})
-
-
 // DARK THEME
 
 darkSwitch.addEventListener("click", e => {
 
-    const sw = navContainer.childNodes[3];
     container.classList.toggle("dt-container")
     
     var cards = document.querySelectorAll('.card');
     for(i=0; i<cards.length; i++) {
-        cards[i].classList.toggle("dt-card")
+        cards[i].classList.toggle("dt-card");
     }
 
     var primaryHeading = document.querySelector('.primary-heading');
     primaryHeading.classList.toggle("dt-primary-heading");
+    var secondaryHeading = document.querySelector('.secondary-heading');
+    secondaryHeading.classList.toggle("dt-secondary-heading");
 
     var nameOfGradient = document.querySelectorAll('.name');
     for(i=0; i<nameOfGradient.length; i++) {
@@ -225,14 +171,11 @@ darkSwitch.addEventListener("click", e => {
     //     btCards[i].classList.toggle('dt-tab-cards');
     // }
 
-    gradientForm.classList.toggle("dt-add-gradient-form");
-    console.log(gradientForm.childNodes);
-    gradientForm.childNodes[1].classList.toggle("dt-gname")   
-    console.log(gradientForm.childNodes[7].childNodes);
-    var inp = gradientForm.childNodes[5].childNodes;
-    console.log(inp);
-    inp[1].classList.toggle("dt-color");
-    inp[5].classList.toggle("dt-color");
+    // gradientForm.classList.toggle("dt-add-gradient-form");
+    // gradientForm.childNodes[1].classList.toggle("dt-gname")   
+    // var inp = gradientForm.childNodes[5].childNodes;
+    // inp[1].classList.toggle("dt-color");
+    // inp[5].classList.toggle("dt-color");
 })
 
 // OLDER VERSION SUPPORT
@@ -268,4 +211,3 @@ bookmarks.addEventListener("click", e => {
         comingSoonTab.classList.toggle("hide")
     }, 750)
 })
-
