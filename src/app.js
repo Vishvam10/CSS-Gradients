@@ -27,12 +27,7 @@ var i;
 function oldBrowserSupport(condition, style) {
     if(condition == "true") {
         var input = document.getElementById('myInput').value = 
-        `background: ${style};
-        \nbackground: -webkit-${style};
-        \nbackground: -moz-${style};
-        \nbackground: -ms-${style};
-        \nbackground: -o-${style};
-        `
+        `background: ${style};\nbackground: -webkit-${style};\nbackground: -moz-${style};\nbackground: -ms-${style};\nbackground: -o-${style};`
     } else {
         var input = document.getElementById('myInput').value = `background: ${style}`;
     }
